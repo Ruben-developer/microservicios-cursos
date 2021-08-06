@@ -45,7 +45,7 @@ public class CursoController extends CommonController<Curso, CursoService> {
 		return ResponseEntity.status(HttpStatus.CREATED).body(this.service.save(dbCurso));
 	}
 
-	@PutMapping("/{id}/Eliminar-alumno")
+	@PutMapping("/{id}/eliminar-alumno")
 	public ResponseEntity<?> eliminarAlumno(@RequestBody Alumno alumno, @PathVariable Long id){
 		Optional<Curso> o = this.service.findById(id);
 		
