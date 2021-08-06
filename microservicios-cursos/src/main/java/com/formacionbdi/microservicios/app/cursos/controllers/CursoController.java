@@ -22,7 +22,7 @@ public class CursoController extends CommonController<Curso, CursoService> {
 	public ResponseEntity<?> editar(@RequestBody Curso curso, @PathVariable Long id){
 		Optional<Curso> o = this.service.findById(id);
 		
-		if(o.isPresent()) {
+		if(!o.isPresent()) {
 			return ResponseEntity.notFound().build();
 		}
 		Curso dbCurso = o.get();
@@ -34,7 +34,7 @@ public class CursoController extends CommonController<Curso, CursoService> {
 	public ResponseEntity<?> asignarAlumnos(@RequestBody List<Alumno> alumnos, @PathVariable Long id){
 		Optional<Curso> o = this.service.findById(id);
 		
-		if(o.isPresent()) {
+		if(!o.isPresent()) {
 			return ResponseEntity.notFound().build();
 		}
 		Curso dbCurso = o.get();
@@ -49,7 +49,7 @@ public class CursoController extends CommonController<Curso, CursoService> {
 	public ResponseEntity<?> eliminarAlumno(@RequestBody Alumno alumno, @PathVariable Long id){
 		Optional<Curso> o = this.service.findById(id);
 		
-		if(o.isPresent()) {
+		if(!o.isPresent()) {
 			return ResponseEntity.notFound().build();
 		}
 		Curso dbCurso = o.get();
