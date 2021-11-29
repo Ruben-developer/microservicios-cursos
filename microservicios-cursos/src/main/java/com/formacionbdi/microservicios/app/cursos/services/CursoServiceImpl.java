@@ -5,7 +5,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.formacionbdi.microservicios.app.cursos.models.entity.Curso;
 import com.formacionbdi.microservicios.app.cursos.models.repository.CursoRepository;
-import com.formaciondbi.microservicios.commons.services.CommonServiceImpl;
+import com.formacionbdi.microservicios.commons.services.CommonServiceImpl;
 
 @Service
 public class CursoServiceImpl extends CommonServiceImpl<Curso, CursoRepository>implements CursoService {
